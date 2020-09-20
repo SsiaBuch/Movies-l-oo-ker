@@ -7,6 +7,7 @@ export const Navigatin = (props) => (
             <li className='nav__item'><a href='*'>Фильмы</a></li>
             <li className='nav__item'><a href='*'>Сериалы</a></li>
             <li className='nav__item'><a href='*'>ТВ-программы</a></li>
+            <li className='nav__item'><a href='*'>Случайный фильм!</a></li>
         </ul>
     </nav>
 )
