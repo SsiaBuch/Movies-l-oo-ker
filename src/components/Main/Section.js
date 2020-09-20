@@ -4,7 +4,7 @@ import './section.css'
 export const Section = (props) =>
     <div className='conteiner'>
         <div className='section'>
-            <div className=''>Что популярно</div>
+            <div className=''>Что популярно ?</div>
             <div className='section__flex'>
                 {
                     props.popularMovies.map((el, i) => {
