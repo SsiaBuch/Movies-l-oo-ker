@@ -7,6 +7,12 @@ export const Navigatin = (props) => (
             <li className='nav__item'><a href='*'>Фильмы</a></li>
             <li className='nav__item'><a href='*'>Сериалы</a></li>
             <li className='nav__item'><a href='*'>ТВ-программы</a></li>
+<<<<<<< Updated upstream
+=======
+            <li className='nav__item'><a href='*'>Случайный фильм!</a></li>
+            <li className='nav__item'><a href='*'>Случайный фильм!</a></li>
+
+>>>>>>> Stashed changes
         </ul>
     </nav>
 )
