@@ -1,0 +1,6 @@
+.nav {
+    display: flex;
+}
+.nav__item  {
+    padding: 8px 14px;
+}

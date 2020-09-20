@@ -1,0 +1,12 @@
+.banner {
+    width: 100%;
+    }
+.banner__menu_style {
+    height: 80px;
+    background-color: rgb(248, 249, 250);
+}
+.banner__img {
+    background-image: url(../../image/55555.png);
+    width: 100%;
+    background-position: center;
+}
