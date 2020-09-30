@@ -1,11 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import { MoviesApp } from './MoviesApp';
+import { App } from './App.js';
+import { BrowserRouter } from 'react-router-dom';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <MoviesApp />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+const application = (
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>
+)
+ReactDOM.render(application, document.getElementById('root'));
+
+// ReactDOM.render(
+//   <React.StrictMode>
+//     <MoviesApp />
+//   </React.StrictMode>,
+//   document.getElementById('root')
+// );

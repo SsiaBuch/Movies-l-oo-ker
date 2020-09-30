@@ -1,0 +1,18 @@
+.random__container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 0 0;
+
+}
+.random__buttom {
+    height: 60px;
+    width: 500px;
+    border-radius: 50px;
+    background: #ffd400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 1px 0 rgb(255 214 15 / 72%), inset 0 -3px 0 #c9a700;
+}
