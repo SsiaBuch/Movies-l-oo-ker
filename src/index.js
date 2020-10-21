@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import { App } from './App.js';
+import './index.css';
 import { BrowserRouter } from 'react-router-dom';
 
 const application = (
@@ -10,10 +10,3 @@ const application = (
   </BrowserRouter>
 )
 ReactDOM.render(application, document.getElementById('root'));
-
-// ReactDOM.render(
-//   <React.StrictMode>
-//     <MoviesApp />
-//   </React.StrictMode>,
-//   document.getElementById('root')
-// );

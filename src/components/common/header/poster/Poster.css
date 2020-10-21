@@ -1,0 +1,10 @@
+.poster {
+    width: 100%;
+}
+.poster_background {
+    background-image: url(./poster.png);
+    height: 250px;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+}

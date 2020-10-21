@@ -1,0 +1,85 @@
+.aside-block {
+    padding: 0px 20px 20px;
+    width: 23%;
+    box-shadow: 5px 0 10px 0 #00000025 inset;
+    padding: 0px 20px;
+}
+
+
+
+.aside-section {
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid rgb(236, 229, 229);
+}
+.aside-section__title a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url('./BG.png');
+    width: 200px;
+    height: 100px;
+    background-position: center;
+    background-size: cover;
+    font-size: 25px;
+    line-height: 22px;
+    text-align: center;
+    color: #ffd400;
+
+}
+/* .aside-section__title a:hover {
+   background-image: none;
+} */
+.aside-section__title h3 {
+    text-transform: uppercase;
+    color: black;
+    z-index: 10;
+}
+.aside-section__title span {
+    font-size: 15px;
+    z-index: 10;
+    color: black;
+}
+.aside-section__title div {
+    position: absolute;
+    font-size: 70px;
+    transform: translate(0%, 0%);
+}
+.aside-section__button {
+    margin: 10px 0 5px;
+}
+.aside-section__button span{
+    font-size: 15px;
+}
+
+
+.aside-section__API {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+
+
+
+
+
+/* -------Реклама-------- */
+.section-movie__aside-advertising {
+    padding-top: 20px;
+    width: 100%;
+    display: flex;
+
+}
+.aside-advertising__img {
+    width: 100%;
+    height: 500px;
+    background-position: center;
+    background-image: url('./adv.png');
+}
