@@ -10,9 +10,14 @@ export const getMapRender = (arr, render) => {
 }
 export const getMapRenderFull = (arr, render, onClick, defaultItem, style) => {
     return (
-        arr.map((el, i) =>
-            <React.Fragment key={i}>
-                {render(el, onClick, defaultItem, style)}
-            </React.Fragment>)
+        arr.map((el, i) => {
+            return (
+                <React.Fragment key={i}>
+                    {render(el, onClick, defaultItem, style)}
+                </React.Fragment>
+            )
+        }
+
+        )
     )
 }

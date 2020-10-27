@@ -9,8 +9,10 @@ export const ButtonGoTo = (props) => {
         marginLeft: 10,
     }
     return (
-        <NavLink
-            to={`${props.linkTo}`}>
+        <NavLink 
+            onClick={props.onClick}
+            to={`${props.linkTo}`}
+        >
             <span style={{ color: '#555', borderBottom: '1px dotted #bebebe' }}>{props.text}</span>
             <BsChevronDoubleRight style={style} />
         </NavLink>

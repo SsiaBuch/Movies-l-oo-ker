@@ -1,23 +1,61 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 
-export class API extends React.Component {
+
+class API extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             APIresult: [],
             isLoading: true,
+            // arr_response: [],
+            // idAPI: [],
+            // i: [],
 
         }
-        // console.log(this.props.defaultItem, this.props.trendType);
+        // console.log(props);
     }
+
+   
 
     componentDidMount() {
         this.setState({ isLoading: true })
         this.props.getAPI.then(API => {
-            // console.log(API.data);
+            // console.log(API.data.results);
             const APIresult = API.data.results;
-            this.setState({ APIresult,  isLoading: false })
+            // const idAPI = API.data.results.map(el => el.id)
+
+            this.setState({ APIresult, isLoading: false })
+
+
+          
+
+
+            // if (this.props.switchType === `upcoming`) {
+            //     const api_arr = APIresult.map(el => (getAPIbyID(`movie`, el.id)))
+            //     Promise.all(api_arr).then(([...arr_response]) => {
+            //         this.setState({ arr_response })
+            //     })
+
+            // }
+
+            // const api_arr = APIresult.map(el => (getAPIbyID(`movie`, el.id)))
+            // Promise.all(api_arr).then(([...arr_response]) => {
+            //     this.setState({ arr_response })
+            // })
+
+
+
+            // const api_arr = APIresult[i](el => (getAPIbyID(`movie`, el.id)))
+            // Promise.all(api_arr).then(([...arr_response]) => {
+            //     this.setState({ arr_response })
+            // })
+
+
+
+
         });
+
     }
     componentDidUpdate(prevProps) {
         // console.log(prevProps);
@@ -25,7 +63,6 @@ export class API extends React.Component {
             this.props.getAPI.then(API => {
                 // console.log(API.data.results);
                 const APIresult = API.data.results;
-
                 this.setState({ APIresult })
             });
         }
@@ -34,11 +71,13 @@ export class API extends React.Component {
 
     swichContent = option => {
         const { APIresult } = this.state
-        const { renderMap, renderCard, flag, filter } = this.props
+        const { renderMap, renderCard, flag, filter} = this.props
         switch (option) {
             case `upcoming`:
                 return flag ?
-                    renderMap(filter(APIresult).slice(0, 5), renderCard)
+                    renderMap(APIresult.slice(0, 5), renderCard)
+                    // renderMap(filter(APIresult).slice(0, 5), renderCard)
+
                     : renderMap(APIresult, renderCard);
             case `popular`:
                 return flag ?
@@ -56,7 +95,6 @@ export class API extends React.Component {
                 return flag ?
                     renderMap(filter(APIresult).slice(0, 2), renderCard)
                     : renderMap(APIresult, renderCard);
-
             default:
                 break;
         }
@@ -64,6 +102,9 @@ export class API extends React.Component {
 
     render() {
         // console.log(this.state.APIresult);
+        // console.log(this.state.i);
+
+        // console.log(this.state.arr_response);
         const { switchType } = this.props
         const { isLoading } = this.state
         return !isLoading ? (
@@ -75,3 +116,4 @@ export class API extends React.Component {
         ) : 'Loading...'
     }
 }
+export default withRouter(API);

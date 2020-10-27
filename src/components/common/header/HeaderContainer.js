@@ -1,8 +1,7 @@
 import React from 'react';
 import { Header } from './header/Header.js';
-import { Banner } from './banner/Banner.js';
+import  {Banner}  from './banner/Banner.js';
 import { Poster } from './poster/Poster.js';
-// import { Poster } from './poster/poster.png'
 
 
 import { Route } from 'react-router-dom';
@@ -25,19 +24,14 @@ export const HeaderContainer = () => {
     return (
         <>
             <div className='headerContainer'>
-                <Route path='/'>
-                    <Header headerColor={headerColor.light} />
-                </Route>
+                <Header headerColor={headerColor.light} />
 
                 <Route path='/' exact>
                     <Banner />
                 </Route>
 
-                <Route path='/peoples'>
+                <Route path='/people' exact>
                     <Poster />
-                    {/* <div
-                        // style={style[0].poster}
-                        className='poster_background'></div > */}
                 </Route>
 
             </div>

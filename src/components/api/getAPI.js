@@ -8,8 +8,9 @@ const PAGE = `&page=`
 
 export const dataAPI = {
     type: [`movie`, `tv`, `person`],
-    option: [`upcoming`, `popular`, `trending`, `now_playing`, `on_the_air`,`top_rated`],
-    //            0           1          2           3                4          6 
+    option: [`upcoming`, `popular`, `trending`, `now_playing`, `on_the_air`, `top_rated`],
+    //            0           1          2           3                4          5 
+    option1: {upcoming: `upcoming`, popular: `popular`, trending: `trending`, now_playing: `now_playing`, on_the_air: `on_the_air`, top_rated: `top_rated`},
     trending_type: [`all`, `movie`, `tv`],
 }
 export const getAPI = (type, option, page) => {
@@ -26,9 +27,9 @@ export const getApiTrand = (type, period, page) => {
     return axios.get(`${DEFAULT_API}trending/${type}/${period}${API_KEY}${LANGUAGE}${PAGE}${page}`)
 }
 
-export const getAPILatest = (type, option) => {
-    if (!type || !option) {
+export const getAPIbyID = (type, id) => {
+    if (!type || !id) {
         console.error('error')
     }
-    return axios.get(`${DEFAULT_API}${type}/${option}${API_KEY}${LANGUAGE}`)
+    return axios.get(`${DEFAULT_API}${type}/${id}${API_KEY}${LANGUAGE}`)
 }

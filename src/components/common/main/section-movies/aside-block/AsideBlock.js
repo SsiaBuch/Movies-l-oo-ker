@@ -9,7 +9,7 @@ import { AsideTitle } from './AsideTitle.js'
 import { ButtonGoTo } from '../../../../generic/button/ButtonGoTo.js';
 
 
-import { API } from '../../../../api/API.js'
+import  API from '../../../../api/API.js'
 import { getAPI, dataAPI } from '../../../../api/getAPI.js';
 import { MediaItems } from '../../../../lib/MediaItems.js'
 import { getMapRender } from '../../../../lib/GetMapRender.js'

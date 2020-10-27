@@ -4,6 +4,7 @@ import { AsideBlock } from './aside-block/AsideBlock.js';
 
 import { getApiTrand, dataAPI } from '../../../api/getAPI.js';
 import { MediaItems } from '../../../lib/MediaItems.js'
+
 import { getMapRender } from '../../../lib/GetMapRender.js'
 import { Route } from 'react-router-dom';
 
@@ -25,7 +26,7 @@ export class SectionMovies extends React.Component {
     }
     // Переключатель: новинки => фильмы => сериалы и тд.
     toggleMoviesNavigation = (event) => {
-        // console.log(event.target.value);
+        console.log(event.target);
         event.preventDefault();
         this.setState({
             defaultItem: event.target.value,
@@ -44,10 +45,11 @@ export class SectionMovies extends React.Component {
         // console.log(this.state.defaultItem, this.state.trendType);
 
         return (
-            <div className='section'>
-                <div className='container'>
-                    <div className='section__container' style={{ display: 'flex' }}>
-                        <Route path='/' exact>
+            <Route path='/' exact>
+
+                <div className='section'>
+                    <div className='container'>
+                        <div className='section__container' style={{ display: 'flex' }}>
                             <MainBlock
                                 togleFlag={this.state.togleFlag}
                                 onToggleMoviesDetails={this.toggleMoviesDetails}
@@ -60,7 +62,7 @@ export class SectionMovies extends React.Component {
 
                                 sectionTitle={"Фильмы и сериалы"}
                                 sectionInfo={"Топ самых популярных актеров."}
-                                
+
                                 sizeBlock={{ width: '77%' }}
 
                                 switchType={dataAPI.option[2]} // trending
@@ -68,16 +70,15 @@ export class SectionMovies extends React.Component {
                                 renderMap={getMapRender}
                                 renderCard={[MediaItems.movieCardFull, MediaItems.movieCard]}
                             />
-                        </Route>
-                       
-                        <Route path='/' exact>
+
                             <AsideBlock />
-                        </Route>
 
 
+                        </div>
                     </div>
                 </div>
-            </div>
+            </Route>
+
         );
     }
 }

@@ -1,11 +1,11 @@
 import React from 'react';
 import './MainBlock.css';
 import { ButtonMoviesDetailsChange } from '../../../../generic/button/ButtonMoviesDetailsChange.js'
-import { SectionTitle } from '../../section-title/SectionTitle.js';
+import { SectionTitle } from '../../../../generic/section-title/SectionTitle.js';
 import { MovieSort } from '../../../../generic/movie-sort/MovieSort.js';
 import { Navigation } from '../../../../generic/navigation/Navigation.js';
 import { NavItems } from '../../../../generic/navigation/NavItems.js';
-import { API } from '../../../../api/API.js'
+import API from '../../../../api/API.js'
 
 import { getMapRenderFull } from '../../../../lib/GetMapRender.js'
 import { Route } from 'react-router-dom';
@@ -59,6 +59,8 @@ export const MainBlock = (props) => {
                         renderMap={props.renderMap}
                         renderCard={props.renderCard}
                         trendType={props.trendType}
+                        // type={`movie`}
+
                     />
                 </div>
             </div>
