@@ -3,7 +3,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 export const AsideTitle = (props) =>
-    <NavLink to='/people' href='#onTop'>
+    <NavLink to={props.linkTo}>
         <h3>{props.title}</h3>
         <span>{props.preTitle}</span>
         {/* <div><BsChevronDoubleRight /></div> */}

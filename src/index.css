@@ -60,22 +60,23 @@ button::-moz-focus-inner {
   width: 100%;
 }
 .mainContainer {
+  position: relative;
   width: 100%;
   margin: 50px 0;
+  min-height: 690px;
   
 }
 .section {
   width: 100%;
   margin: 50px 0;
 }
+.footer {
+  width: 100%;
+  background-color: black;
+}
 .section__container {
   background-color: white;
   box-shadow: 0 0 20px 0 #0000003a;
-  /* position: relative; */
-  /* display: flex; */
-}
-.footerContainet {
-  width: 100%;
 }
 
 @media (min-width: 570px) {

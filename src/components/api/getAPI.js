@@ -5,7 +5,6 @@ const API_KEY = `?api_key=90fb7095127ff386353f1b685ff0f2fe`;
 const LANGUAGE = `&language=ru`;
 const PAGE = `&page=`
 
-
 export const dataAPI = {
     type: [`movie`, `tv`, `person`],
     option: [`upcoming`, `popular`, `trending`, `now_playing`, `on_the_air`, `top_rated`],
@@ -32,4 +31,8 @@ export const getAPIbyID = (type, id) => {
         console.error('error')
     }
     return axios.get(`${DEFAULT_API}${type}/${id}${API_KEY}${LANGUAGE}`)
+}
+
+export const getAPISearch = () => {
+    return axios.get(`${DEFAULT_API}/search/person${API_KEY}${LANGUAGE}&include_adult=false`)
 }

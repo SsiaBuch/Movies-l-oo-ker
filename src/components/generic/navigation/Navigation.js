@@ -2,10 +2,10 @@ import React from 'react';
 
 export const Navigation = (props) => {
     return (
-        <nav className={props.navStyle}>
-            <ul style={{ display: "flex" }}>
+        <nav>
+            <ul style={{ display: "flex"}}>
                 {
-                    props.getMapRender
+                    props.getRender
                 }
             </ul>
         </nav>

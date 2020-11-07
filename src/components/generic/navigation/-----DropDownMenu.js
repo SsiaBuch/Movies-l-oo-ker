@@ -4,7 +4,7 @@ import { BsChevronDoubleDown, BsChevronDoubleUp } from "react-icons/bs";
 
 export class DropDownMenu extends React.Component {
     constructor(props) {
-        // super(props);
+        super(props);
         this.state = {
             sort: ['По популярности', 'По дате', 'По годам', 'По алфавиту'],
             flagMovieSort: false,

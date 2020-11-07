@@ -17,7 +17,6 @@
     background-image: url('./people.png');
 }
 .section-people__search {
-    width: 250px;
     height: 40px;
     line-height: 40px;
     color: #555;

@@ -2,15 +2,15 @@ import React from 'react';
 import './MainBlock.css';
 import { ButtonMoviesDetailsChange } from '../../../../generic/button/ButtonMoviesDetailsChange.js'
 import { SectionTitle } from '../../../../generic/section-title/SectionTitle.js';
-import { MovieSort } from '../../../../generic/movie-sort/MovieSort.js';
+
 import { Navigation } from '../../../../generic/navigation/Navigation.js';
 import { NavItems } from '../../../../generic/navigation/NavItems.js';
 import API from '../../../../api/API.js'
+import { getMapRender } from '../../../../lib/GetMapRender.js'
+import { Route, withRouter } from 'react-router-dom';
+import { BsChevronDoubleDown, BsChevronDoubleUp } from "react-icons/bs";
 
-import { getMapRenderFull } from '../../../../lib/GetMapRender.js'
-import { Route } from 'react-router-dom';
-
-export const MainBlock = (props) => {
+const MainBlock = (props) => {
     // console.log(props);
     return (
         <>
@@ -18,39 +18,46 @@ export const MainBlock = (props) => {
                 flag={props.togleFlag}
                 onClick={props.onToggleMoviesDetails}
             />
-
-            <div className='main-block' style={props.sizeBlock}>
-                {/* <Route path=''>
-                    <div style={{ marginTop: 20, fontSize: 12, color: '#818181', }}>Главная / Актеры</div>
-                </Route> */}
-
-
+            <div className='main-block' style={{ width: '77%' }}>
                 <div className='main-block__header'>
                     <div className='main-block__title'>
                         <SectionTitle
                             title={props.sectionTitle}
                             logo="main-block__logo"
                         />
-                        <MovieSort />
+
+                        <div className='movie-sort'>
+                            <div className='movie-sort__name'>Сортировка</div>
+                            <div className='movie-sort_flex'>
+                                <div className='movie-sort__choice' onClick={props.movieSortHandler} ref={props.sortButton}>По популярности</div>
+
+                                {props.flagDropDown ? <div className='choice' ref={props.sortRef}>
+                                    {['По популярности', 'По дате', 'По годам', 'По алфавиту'].map((el, i) =>
+                                        <div key={i} className='choice__variant'>{el}</div>
+                                    )}
+                                </div> : null}
+
+                            </div>
+                            <BsChevronDoubleDown className='movie-sort__icon' />
+                            <BsChevronDoubleUp className='movie-sort__icon' />
+                        </div>
                     </div>
-
-                    {/* ОПИСАНИЕ: меняется в зависимости откуда клик */}
-                    {/* <Route path=''>
-                        <div className='main-block__info'>{props.sectionInfo}</div>
-                    </Route> */}
-
                     <Route path='/' exact>
                         <Navigation
-                            getMapRender={getMapRenderFull(
+                            getRender={getMapRender(
                                 props.navList,
                                 NavItems.sectionNav,
                                 props.onToggleMoviesNavigation,
                                 props.defaultItem, 'main-block__nav_active')}
                             navStyle='main-block__nav'
                         />
+                        {/* <ToggleNavigation
+                            navStyle='main-block__nav'
+                            navList={['Все категории', 'Фильмы', 'Сериалы']}
+                            style='main-block__nav_active'
+                        /> */}
                     </Route>
                 </div>
-
                 <div className='main-block__API'>
                     <API
                         switchType={props.switchType}
@@ -59,12 +66,10 @@ export const MainBlock = (props) => {
                         renderMap={props.renderMap}
                         renderCard={props.renderCard}
                         trendType={props.trendType}
-                        // type={`movie`}
-
                     />
                 </div>
             </div>
         </>
-
     )
 }
+export default withRouter(MainBlock);

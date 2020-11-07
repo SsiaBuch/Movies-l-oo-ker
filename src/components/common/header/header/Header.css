@@ -1,5 +1,6 @@
 .header {
     width: 100%;
+    background-color: rgb(255, 255, 255);
 }
 .header__content {
     width: 100%;
@@ -7,7 +8,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    text-align: center;
 }
 .header__logo {
     height: 80px;
@@ -15,13 +15,11 @@
 }
 .header__unite {
     width: 75%;
+    height: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 } 
-.header__nav li:hover {
-    color:  #ffd400;
-}
 .header__search {
     margin-left: 30px;
     width: 220px;

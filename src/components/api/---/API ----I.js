@@ -1,6 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 
+
 class API extends React.Component {
     constructor(props) {
         super(props);
@@ -70,3 +71,18 @@ class API extends React.Component {
     }
 }
 export default withRouter(API);
+
+
+
+
+// const api_arr = APIresult.map(el => (getAPIbyID(`movie`, el.id)))
+            // Promise.all(api_arr).then(([...arr_response]) => {
+            //     this.setState({ arr_response })
+            // })
+
+
+
+            // const api_arr = APIresult[i](el => (getAPIbyID(`movie`, el.id)))
+            // Promise.all(api_arr).then(([...arr_response]) => {
+            //     this.setState({ arr_response })
+            // })

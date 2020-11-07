@@ -7,6 +7,7 @@ export class APIbyID extends React.Component {
             APIresult: [],
             isLoading: true,
         }
+        console.log(props);
     }
 
     componentDidMount() {
@@ -17,9 +18,8 @@ export class APIbyID extends React.Component {
             this.setState({ APIresult, isLoading: false })
         });
     }
-
     render() {
-    //    console.log(this.state.APIresult);
+       console.log(this.state.APIresult);
        const { renderCard } = this.props
        const { APIresult, isLoading } = this.state
        return !isLoading ? (

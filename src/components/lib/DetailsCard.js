@@ -1,8 +1,8 @@
 import React from 'react';
 
-import { APIbyID } from '../../api/APIbyID.js';
-import { getAPIbyID } from '../../api/getAPI.js';
-import { MediaItems } from '../../lib/MediaItems.js';
+import { APIbyID } from '../api/APIbyID.js';
+import { getAPIbyID } from '../api/getAPI.js';
+import { MediaItems } from '../lib/MediaItems.js';
 
 import { withRouter } from 'react-router-dom';
 
@@ -20,14 +20,16 @@ class DetailsCard extends React.Component {
     getTypeCard = (param) => {
         if (param.search('people') !== -1) {
             return 'person'
-        } else if (param.search('upcoming') !== -1) {
+        } else if (param.search('movie') !== -1) {
             return 'movie'
+        } else if (param.search('tv') !== -1) {
+            return 'tv'
         }
     }
     getRenderCard = (param) => {
         if (param.search('people') !== -1) {
             return MediaItems.peopleCardDetails
-        } else if (param.search('upcoming') !== -1) {
+        } else if (param.search('movie') !== -1 || param.search('tv') !== -1) {
             return MediaItems.movieCardFull
         }
     }
@@ -39,8 +41,8 @@ class DetailsCard extends React.Component {
         console.log(this.getTypeCard(URLname));
 
         return (
-            // <div className='section'>
-            <div className='container'>
+            // <div className='section' style={{backgroundColor: 'black'}}>
+            <div className='container' >
                 <div className='section__container'>
 
 

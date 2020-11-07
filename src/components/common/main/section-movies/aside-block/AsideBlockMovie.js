@@ -1,23 +1,19 @@
 import React from 'react';
-// import { SectionTitle } from '../SectionTitle/SectionTitle.js';
-// import { Navigation } from '../../Library/Navigation/Navigation.js'
-// import { MoviesContent } from '../movies-content/MoviesContent.js';
-// import { MoviesContentFull } from '../movies-content/MoviesContentFull.js';
-// import { ButtonMoviesDetailsChange } from '../../Library/Button/ButtonMoviesDetailsChange.js'
+import './AsideBlock.css';
+
 import { AsideTitle } from './AsideTitle.js'
-// import { MovieSort } from '../MovieSort.js'
 import { ButtonGoTo } from '../../../../generic/button/ButtonGoTo.js';
 
-
-import  API from '../../../../api/API.js'
+import API from '../../../../api/API.js'
 import { getAPI, dataAPI } from '../../../../api/getAPI.js';
 import { MediaItems } from '../../../../lib/MediaItems.js'
 import { getMapRender } from '../../../../lib/GetMapRender.js'
 import { MovieLatest } from '../../../../lib/Filters.js'
 
-import './AsideBlock.css';
+import { withRouter } from 'react-router-dom';
 
-export const AsideBlock = (props) => {
+const AsideBlockMovie = (props) => {
+    // console.log(props);
     return (
         <>
             <div className='aside-block'>
@@ -26,15 +22,20 @@ export const AsideBlock = (props) => {
                     <div className='aside-section__title'>
                         <AsideTitle
                             title="смотрят"
-                            preTitle="сейчас" />
+                            preTitle="сейчас"
+                            linkTo={"movies/now_playing"}
+                        />
                     </div>
                     <div className='aside-section__button'>
-                        <ButtonGoTo text='Все фильмы' linkTo={"/people"}/>
+                        <ButtonGoTo
+                            text='Все фильмы'
+                            linkTo={"movies/now_playing"}
+                        />
                     </div>
                     <div className='aside-section__API'>
                         <API
                             switchType={`aside`}
-                            getAPI={getAPI(dataAPI.type[0], dataAPI.option[3], 1)}
+                            getAPI={getAPI(dataAPI.type[0], dataAPI.option[3], 1)} // movies/now_playing
                             flag={true}
                             renderMap={getMapRender}
                             renderCard={MediaItems.movieCard}
@@ -45,10 +46,14 @@ export const AsideBlock = (props) => {
                     <div className='aside-section__title'>
                         <AsideTitle
                             title="Премьеры"
-                            preTitle="фильмов" />
+                            preTitle="фильмов"
+                            linkTo={"movies/upcoming"}
+                        />
                     </div>
                     <div className='aside-section__button'>
-                        <ButtonGoTo text='Все премьеры' linkTo={"/people"} />
+                        <ButtonGoTo
+                            text='Все премьеры'
+                            linkTo={"movies/upcoming"} />
                     </div>
                     <div className='aside-section__API'>
                         <API
@@ -70,7 +75,7 @@ export const AsideBlock = (props) => {
                     <div className='aside-advertising__img'></div>
                 </div>
             </div>
-
         </>
     )
 }
+export default withRouter(AsideBlockMovie);

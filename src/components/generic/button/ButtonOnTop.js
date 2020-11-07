@@ -1,3 +1,12 @@
+import React from 'react';
+import './ButtonOnTop.css'
+import { BsChevronDoubleUp } from "react-icons/bs";
+import {ClickOnTopSmooth} from '../../lib/ClickOnTop.js';
+
 export const ButtonOnTop = () => {
-    window.scrollTo(0, 0);
+    return (
+        <button onClick={ClickOnTopSmooth} className='btnTop'>
+            <BsChevronDoubleUp />
+        </button>
+    )
 }

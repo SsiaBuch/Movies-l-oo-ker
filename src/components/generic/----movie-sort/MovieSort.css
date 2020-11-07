@@ -1,4 +1,4 @@
-.movie-sort {
+/* .movie-sort {
     display: flex;
     align-items: flex-end;
     }
@@ -22,7 +22,7 @@
     transform: translate(-3%, 110%);
     border-bottom-left-radius: 10px;
     border-top-right-radius: 10px;
-display: flex;
+    display: flex;
     flex-direction: column;
 }
 .choice__variant {
@@ -39,4 +39,4 @@ display: flex;
 .movie-sort__icon {
     cursor: pointer;
     color: rgb(172, 172, 172);
-}
+} */

@@ -1,0 +1,23 @@
+/* ---People Card--- */
+.searchCard {
+    display: flex;
+    align-items: center;
+    transition: .5s all;
+}
+.searchCard:hover {
+    background-color: #e0e0e0;
+    transition: .5s all;
+}
+.searchCard__people_size {
+    padding: 5px 20px;
+}
+.searchCard__img {
+    height: 43px;
+}
+
+.searchCard__peopName {
+    text-align: center;
+    font-size: 13px;
+    padding-left: 20px;
+    color: #818181;
+}

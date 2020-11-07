@@ -87,7 +87,7 @@
 .card__moviePoster {
     height: 290px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: flex-end;
 }
 .card__movie-img {
@@ -146,8 +146,8 @@
     /* align-items: flex-end; */
 }
 .movieFull__poster-img {
-    width: 200px;
-    height: 300px;
+    /* width: 200px; */
+    height: 290px;
     box-shadow: 0 0 5px 0 #000000d3;
 }
 .movieFull__info {
