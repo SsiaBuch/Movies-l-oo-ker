@@ -1,0 +1,42 @@
+/* .movie-sort {
+    display: flex;
+    align-items: flex-end;
+    }
+.movie-sort__name {
+    color: rgb(172, 172, 172);
+    text-transform: uppercase;
+    font-size: 13px;
+}
+.movie-sort_flex {
+    display: flex;
+    align-items: flex-end;
+}
+.movie-sort__choice {
+    font-size: 13px;
+    padding: 0 10px;
+    cursor: pointer;
+}
+.choice {
+    background-color: rgb(236, 229, 229);
+    position: absolute;
+    transform: translate(-3%, 110%);
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.choice__variant {
+    font-size: 13px;
+    cursor: pointer;
+    padding: 8px 15px;
+}
+.choice__variant:hover {
+        background-color: rgba(214, 208, 208);
+        border-bottom-left-radius: 10px;
+        border-top-right-radius: 10px;
+        color: rgb(255, 255, 255);
+}
+.movie-sort__icon {
+    cursor: pointer;
+    color: rgb(172, 172, 172);
+} */
