@@ -1,0 +1,198 @@
+.card {
+    display: flex;
+    flex-direction: column;
+}
+.card__img {
+    height: 100%;
+    box-shadow: 0 0 20px 0 #0000008c;
+    transition: .5s all;
+}
+.card__img:hover {
+    cursor: pointer;
+    height: 110%;
+    transition: .5s all;
+}
+
+/* ---Banner Card--- */
+.card__banner_size {
+    width: 150px;
+    padding: 0 20px;
+}
+.card__banPoster {
+    height: 210px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.card__banTitle {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #ffffff67;
+}
+.card__banDetails {
+    text-align: center;
+    font-size: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: rgba(163, 163, 163, 0.363);
+}
+
+/* ---People Card--- */
+.card__people_size {
+    width: 100px;
+    padding: 0 10px;
+}
+.card__peopProfile {
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card__peopName {
+    text-align: center;
+    font-size: 12px;
+    margin-top: 12px;
+    color: #818181;
+}
+
+
+
+
+/* ---People Card ON FULL POSTER--- */
+/* .card__people-poster_size {
+    width: 135px;
+    background-color: black;
+    height: 30px;
+}
+.card__people-poster {
+    border-left: 8px solid black;
+    opacity: 0.5;
+    height: 100%;
+} */
+
+
+
+
+
+/* ---Movie Card--- */
+.card__movie_size {
+    width: 200px;
+    margin-bottom: 40px;
+}
+.card__moviePoster {
+    height: 290px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.card__movie-img {
+    height: 100%;
+    box-shadow: 0 0 10px 0 #0000008c;
+    transition: .5s all;
+}
+.card__movie-img:hover {
+    box-shadow: 0 0 5px 0 #00000073;
+    cursor: pointer;
+    transition: .5s all;
+}
+.card__movieTitle {
+    text-align: center;
+    font-size: 18px;
+    margin-top: 8px;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #818181;
+}
+.card__movieTitle:hover {
+    color: rgba(0, 0, 0, 0.70);
+    cursor: pointer;
+}
+.card__movieDetails {
+    text-align: center;
+    font-size: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: rgb(199, 199, 199);
+}
+
+
+
+
+
+
+
+
+
+.movieFull {
+    width: 100%;
+}
+.movieFull__conteiner {
+    width: 700px;
+    display: flex;
+    /* align-items: center; */
+    margin-bottom: 30px;
+}
+.movieFull__poster {
+    /* display: flex; */
+    /* justify-content: space-between; */
+    /* align-items: flex-end; */
+}
+.movieFull__poster-img {
+    /* width: 200px; */
+    height: 290px;
+    box-shadow: 0 0 5px 0 #000000d3;
+}
+.movieFull__info {
+    width: 100%;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+}
+.info__title {
+    font-size: 18px;
+    margin-top: 5px;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+}
+.info__title a:hover {
+    color: rgba(0, 0, 0, 0.70);
+}
+.info__details {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: rgb(168, 168, 168);
+    font-size: 13px;
+}
+.info__params {
+    color: rgb(168, 168, 168);
+}
+.info__discription {
+    /* height: 90px;
+    overflow: hidden; */
+    font-size: 13px;
+
+    max-height:100px;
+    overflow:hidden;
+    margin-top:-20px;
+}
+.info__discription:before {
+    content:"";
+    display:block;
+    height:30px;
+    position:relative;
+    top:80px;
+    background-image:linear-gradient(to bottom, rgba(255, 255, 255, 0), #fff 50%)
+}

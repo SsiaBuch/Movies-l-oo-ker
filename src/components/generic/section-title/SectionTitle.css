@@ -1,0 +1,17 @@
+.title {
+    display: flex;
+    align-items: center;
+}
+.title__logo {
+    width: 100px;
+    height: 100px;
+    background-position: center;
+    background-size: cover;
+}
+.title__name {
+    text-align: center;
+    font-size: 25px;
+    font-weight: 900;
+    padding-left: 10px;
+    text-transform: uppercase;
+}

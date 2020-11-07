@@ -1,0 +1,35 @@
+.search {
+    width: 250px;
+}
+.search__input {
+    width: 80%;
+    height: 30px;
+    font-weight: 900;
+}
+
+.search_results {
+    z-index: 1000;
+    width: 290px;
+    position: absolute;
+    margin-top: 10px;
+    box-shadow: 0 0 20px 0 #00000069;
+    background-color: white;
+}
+
+.search__button {
+    display: flex;
+    justify-content: center;
+    /* margin: 5px 10px 10px 10px; */
+    padding: 5px 10px 10px 10px;
+    border-top: 1px solid #e0e0e0;
+
+}
+.search__button span{
+    font-size: 12px;
+}
+.searchOff {
+    display: none;
+}
+.searchOn {
+    display: block;
+}
