@@ -1,0 +1,18 @@
+.movie__toggle-button {
+    position: absolute;
+    transform: translate(-100%, 0%);
+    width: 20px;
+    height: 20px;
+    padding: 10px;
+    font-size: 20px;
+    background-color: rgba(214, 208, 208);
+    color: rgb(255, 255, 255);
+    transform: 0.5s;
+    border-bottom-left-radius: 10px;
+    cursor: pointer;
+}
+.movie__toggle-button:hover {
+    background-color: #ffd400;
+    color: black;
+    transform: 0.5s;
+}
