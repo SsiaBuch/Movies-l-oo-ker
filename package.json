@@ -2,7 +2,7 @@
   "name": "movies-looker",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://myusername.github.io",
+  "homepage": "https://myusername.github.io/movies-looker",
   "dependencies": {
     "@material-ui/core": "^4.11.0",
     "@material-ui/icons": "^4.9.1",
@@ -19,7 +19,6 @@
     "semantic-ui-css": "^2.4.1",
     "semantic-ui-react": "^1.3.0"
   },
- 
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -b master -d build",
