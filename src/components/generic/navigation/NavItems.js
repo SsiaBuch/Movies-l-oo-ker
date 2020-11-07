@@ -1,9 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { ClickOnTop } from '../../lib/ClickOnTop.js';
-
-import { BsChevronDoubleDown } from "react-icons/bs";
-
 import './NavItems.css'
 
 export const NavItems = {
